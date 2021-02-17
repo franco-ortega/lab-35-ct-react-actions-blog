@@ -1,8 +1,11 @@
 import React from 'react';
-import Blog from '../../containers/blogs/Blog';
+import BlogList from '../../containers/blogs/BlogList';
+import { BlogProvider } from '../../state/BlogProvider';
 
 export default function App() {
   return (
-    <Blog />
+    <BlogProvider>
+      <BlogList />
+    </BlogProvider>
   );
 }
