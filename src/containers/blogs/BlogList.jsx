@@ -1,9 +1,10 @@
 import React from 'react';
 import BlogDetails from '../../components/blogs/BlogDetails';
-import { useBlogState } from '../../state/BlogProvider';
+import { getBlogs } from '../../selectors/blogSelector';
+import { useSelector } from '../../state/BlogProvider';
 
 export default function Blog() {
-  const { blogs } = useBlogState();
+  const blogs = useSelector(getBlogs);
 
   const blogElements = blogs.map(blog => (
     <li key={blog.title}>
