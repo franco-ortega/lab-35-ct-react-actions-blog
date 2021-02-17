@@ -1,13 +1,20 @@
 import React from 'react';
 import BlogDetails from '../../components/blogs/BlogDetails';
-import BlogForm from './BlogForm';
+import { useBlogState } from '../../state/BlogProvider';
 
 export default function Blog() {
+  const { blogs } = useBlogState();
+
+  const blogElements = blogs.map(blog => (
+    <li key={blog.title}>
+      <BlogDetails {...blog} />
+    </li>
+  ));
+
   return (
-    <div>
+    <ul>
       Blog: This is the blog!
-      <BlogDetails />
-      <BlogForm />
-    </div>
+      {blogElements}
+    </ul>
   );
 }
