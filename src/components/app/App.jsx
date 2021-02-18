@@ -6,8 +6,8 @@ import { BlogProvider } from '../../state/BlogProvider';
 export default function App() {
   return (
     <BlogProvider>
-      <BlogList />
       <BlogForm />
+      <BlogList />
     </BlogProvider>
   );
 }
