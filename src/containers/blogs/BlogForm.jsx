@@ -14,7 +14,6 @@ export default function BlogForm() {
     dispatch(createBlog({ title, blog }));
   };
 
-
   return (
     <div>
       <p>Blog Form</p>
@@ -32,7 +31,6 @@ export default function BlogForm() {
         <br />
         <textarea
           name="hello"
-          id=""
           cols="60"
           rows="20"
           placeholder="Text"

@@ -13,11 +13,6 @@ export const BlogProvider = ({ children }) => {
   );
 };
 
-// export const useBlogState = () => {
-//   const { state } = useContext(BlogContext);
-//   return state;
-// };
-
 export const useSelector = (selector) => {
   const { state } = useContext(BlogContext);
 

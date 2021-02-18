@@ -6,6 +6,7 @@ import { BlogProvider } from '../../state/BlogProvider';
 export default function App() {
   return (
     <BlogProvider>
+      <h1>Welcome to the Blog</h1>
       <BlogForm />
       <BlogList />
     </BlogProvider>

@@ -14,7 +14,7 @@ export default function Blog() {
 
   return (
     <ul>
-      Blog: This is the blog!
+      Blog Posts:
       {blogElements}
     </ul>
   );
