@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component renders App 1`] = `
+<DocumentFragment>
+  <h1>
+    Welcome to the Blog
+  </h1>
+  <div>
+    <p>
+      Blog Form
+    </p>
+    <form>
+      Title:
+      <br />
+      <input
+        placeholder="Title"
+        type="text"
+        value=""
+      />
+      <br />
+      Text:
+      <br />
+      <textarea
+        cols="60"
+        name="hello"
+        placeholder="Text"
+        rows="20"
+      />
+      <br />
+      <button>
+        Blog It!
+      </button>
+    </form>
+  </div>
+  <ul>
+    Blog Posts:
+  </ul>
+</DocumentFragment>
+`;
