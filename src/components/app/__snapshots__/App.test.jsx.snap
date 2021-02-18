@@ -22,7 +22,6 @@ exports[`App component renders App 1`] = `
       <br />
       <textarea
         cols="60"
-        id=""
         name="hello"
         placeholder="Text"
         rows="20"
