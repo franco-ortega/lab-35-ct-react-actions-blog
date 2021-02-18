@@ -1,3 +1,3 @@
 export const getBlogs = (state) => {
-  return state.blogs;
+  return state.blogs.blogs;
 };
