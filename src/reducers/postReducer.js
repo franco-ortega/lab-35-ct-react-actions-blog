@@ -14,7 +14,7 @@ export default function reducer(state, action) {
     case DELETE_BLOG:
       return {
         ...state,
-        blogs: state.blog.filter(blog => blog.title !== action.payload)
+        blogs: state.blogs.filter(blog => blog.title !== action.payload)
       };
     default:
       return state;

@@ -1,12 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch } from '../../state/BlogProvider';
+import { deleteBlog } from '../../actions/postActions';
 
 export default function BlogDetails({ title, blog }) {
+  const dispatch = useDispatch();
+
+  const onDeleteClick = () => {
+    dispatch(deleteBlog(title));
+  };
+
   return (
     <div>
-      Blog Details: blog blog bloggy blog blogger.
       <p>{title}</p>
       <p>{blog}</p>
+      <button onClick={onDeleteClick}>Delete Blog Post</button>
     </div>
   );
 }
