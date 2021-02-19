@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { deleteBlog } from '../../actions/postActions';
+import CommentList from '../comments/CommentList';
 
 export default function BlogDetails({ title, blog }) {
   const dispatch = useDispatch();
@@ -15,6 +16,7 @@ export default function BlogDetails({ title, blog }) {
       <p>{title}</p>
       <p>{blog}</p>
       <button onClick={onDeleteClick}>Delete Blog Post</button>
+      <CommentList />
     </div>
   );
 }

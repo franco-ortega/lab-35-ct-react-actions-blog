@@ -3,14 +3,16 @@ import { getBlogs } from './blogSelector';
 describe('blog selectors', () => {
   it('select the list of blogs from state', () => {
     const state = {
-      blogs: [{
-        title: 'My first post',
-        blog: 'All of my words!!!'
-      },
-      {
-        title: 'My second post',
-        blog: 'Two.'
-      }]
+      blogs: {
+        blogs: [{
+          title: 'My first post',
+          blog: 'All of my words!!!'
+        },
+        {
+          title: 'My second post',
+          blog: 'Two.'
+        }]
+      }
     };
 
     const blogs = getBlogs(state);
