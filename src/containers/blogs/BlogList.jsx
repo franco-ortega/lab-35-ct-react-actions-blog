@@ -2,6 +2,7 @@ import React from 'react';
 import BlogDetails from '../../components/blogs/BlogDetails';
 import { getBlogs } from '../../selectors/blogSelector';
 import { useSelector } from 'react-redux';
+import styles from './BlogList.css';
 
 export default function Blog() {
   const blogs = useSelector(getBlogs);
@@ -13,7 +14,7 @@ export default function Blog() {
   ));
 
   return (
-    <ul>
+    <ul className={styles.BlogList}>
       Blog Posts:
       {blogElements}
     </ul>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { createBlog } from '../../actions/postActions';
 import { useDispatch } from 'react-redux';
+import styles from './BlogForm.css';
 
 export default function BlogForm() {
   const dispatch = useDispatch();
@@ -15,7 +16,7 @@ export default function BlogForm() {
   };
 
   return (
-    <div>
+    <div className={styles.BlogForm}>
       <p>Blog Form</p>
       <form onSubmit={onBlogSubmit}>
         Title:

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { deleteBlog } from '../../actions/postActions';
 import CommentList from '../comments/CommentList';
+import styles from './BlogDetails.css';
 
 export default function BlogDetails({ title, blog }) {
   const dispatch = useDispatch();
@@ -12,7 +13,7 @@ export default function BlogDetails({ title, blog }) {
   };
 
   return (
-    <div>
+    <div className={styles.BlogDetails}>
       <p>{title}</p>
       <p>{blog}</p>
       <button onClick={onDeleteClick}>Delete Blog Post</button>

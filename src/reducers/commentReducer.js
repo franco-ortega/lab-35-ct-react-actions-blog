@@ -21,7 +21,7 @@ export default function reducer(state = initialState, action) {
     case CREATE_COMMENT:
       return {
         ...state,
-        comments: [...state.comments, { blogIndex: action.payload.comment }]
+        comments: [...state.comments, { blogIndex: [action.payload.comment] }]
         // state.comments: [...state.comments, action.payload.comment]
       };
     case DELETE_COMMENT:
