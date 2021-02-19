@@ -1,8 +1,8 @@
 export const CREATE_COMMENT = 'CREATE_COMMENT';
 
-export const createComment = (blogIndex, comment) => ({
+export const createComment = (blogIndex, commentIndex, comment) => ({
   type: CREATE_COMMENT,
-  payload: { blogIndex, comment }
+  payload: { blogIndex, commentIndex, comment }
 });
 
 export const DELETE_COMMENT = 'DELETE_COMMENT';
