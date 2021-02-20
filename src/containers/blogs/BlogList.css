@@ -1,0 +1,8 @@
+.BlogList {
+    border: solid 3px violet;
+    padding: 5px;
+
+    li {
+        list-style: none;
+    }
+}
