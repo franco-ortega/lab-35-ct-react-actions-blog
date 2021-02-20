@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { createComment } from '../../actions/commentActions';
 
 export default function CommentForm({ blogIndex }) {
   const dispatch = useDispatch();
-
-//   const [blogIndex, setBlogIndex] = useState(0);
-//   const [commentIndex, setCommentIndex] = useState(0);
   const [comment, setComment] = useState('');
 
   const onCommentSubmit = (e) => {
@@ -34,3 +32,7 @@ export default function CommentForm({ blogIndex }) {
     </div>
   );
 }
+
+CommentForm.propTypes = {
+  blogIndex: PropTypes.number.isRequired
+};

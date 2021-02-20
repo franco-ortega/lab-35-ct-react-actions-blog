@@ -8,8 +8,6 @@ export default function CommentDetails({ comment, blogIndex, commentIndex }) {
   const dispatch = useDispatch();
 
   const onDeleteCommentClick = () => {
-    console.log('Delete Comment button clicked');
-    console.log(commentIndex);
     dispatch(deleteComment({ blogIndex, commentIndex }));
   };
 
