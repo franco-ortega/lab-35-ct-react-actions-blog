@@ -2,18 +2,17 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { createComment } from '../../actions/commentActions';
 
-export default function CommentForm() {
+export default function CommentForm({ blogIndex }) {
   const dispatch = useDispatch();
 
-  const [blogIndex, setBlogIndex] = useState(0);
-  const [commentIndex, setCommentIndex] = useState(0);
+//   const [blogIndex, setBlogIndex] = useState(0);
+//   const [commentIndex, setCommentIndex] = useState(0);
   const [comment, setComment] = useState('');
 
   const onCommentSubmit = (e) => {
     e.preventDefault();
-    setBlogIndex(1);
-    setCommentIndex(1);
-    dispatch(createComment({ blogIndex, commentIndex, comment }));
+
+    dispatch(createComment({ blogIndex, comment }));
   };
 
   return (

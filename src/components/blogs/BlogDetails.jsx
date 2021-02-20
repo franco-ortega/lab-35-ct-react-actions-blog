@@ -5,7 +5,7 @@ import { deleteBlog } from '../../actions/postActions';
 import CommentList from '../comments/CommentList';
 import styles from './BlogDetails.css';
 
-export default function BlogDetails({ title, blog }) {
+export default function BlogDetails({ title, blog, blogIndex }) {
   const dispatch = useDispatch();
 
   const onDeleteClick = () => {
@@ -17,7 +17,7 @@ export default function BlogDetails({ title, blog }) {
       <p>{title}</p>
       <p>{blog}</p>
       <button onClick={onDeleteClick}>Delete Blog Post</button>
-      <CommentList />
+      <CommentList blogIndex={blogIndex} />
     </div>
   );
 }
@@ -25,4 +25,5 @@ export default function BlogDetails({ title, blog }) {
 BlogDetails.propTypes = {
   title: PropTypes.string.isRequired,
   blog: PropTypes.string.isRequired,
+  blogIndex: PropTypes.number.isRequired
 };

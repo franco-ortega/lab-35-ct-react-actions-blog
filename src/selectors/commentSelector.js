@@ -1,3 +1,3 @@
 export const getComments = (state) => {
-  return state.comments.comments;
+  return state.comments;
 };
